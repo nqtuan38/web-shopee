@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Voucher Shopee</title>
+</head>
+
+<body style="font-family: Arial; text-align:center; padding:50px">
+
+  <h2>🎁 VOUCHER ĐỘC QUYỀN</h2>
+
+  <input id="link" placeholder="Dán link Shopee vào đây"
+    style="width:300px; padding:10px">
+
+  <br><br>
+
+  <button onclick="taoLink()" style="padding:10px 20px; background:red; color:white; border:none;">
+    Tạo link
+  </button>
+
+  <div id="ketqua" style="margin-top:30px;"></div>
+
+  <script>
+    function taoLink() {
+      var input = document.getElementById("link").value;
+
+      if (input === "") {
+        alert("Vui lòng nhập link!");
+        return;
+      }
+
+      // 👉 DÁN LINK AFF CỦA BẠN VÀO ĐÂY
+      var aff = "https://s.shopee.vn/6pwjWsN8zu";
+
+      document.getElementById("ketqua").innerHTML =
+      `
+      <div style="border:1px solid #ddd; padding:20px; border-radius:10px; display:inline-block;">
+        <h3>🔥 Giảm 20% tối đa 250K</h3>
+        <p>Đơn tối thiểu 50K</p>
+        <a href="${aff}" target="_blank">
+          <button style="padding:10px 20px; background:red; color:white; border:none;">
+            Mua ngay
+          </button>
+        </a>
+      </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
